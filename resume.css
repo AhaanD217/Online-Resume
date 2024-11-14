@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+    color: white;
+}
+a{
+    color: aqua;
+}
+
+.abstract-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a1a, #2c3e50);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 4em 0;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+}
+
+/* Section Styling */
+section {
+    padding: 3em 20px;
+    margin: 50px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #f39c12;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    
+    height: 4px;
+    background-color: #e67e22;
+    transition: width 0.5s ease-in-out;
+}
+
+section:hover h2::before {
+    width: 100%;
+}
+#skills-1{
+    width: 15em;
+}
+#skills-2{
+    width: 20em;
+    text-align: left;
+}
+/* Skills Section */
+#big-skills {
+    height: 100px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#skills h2 {
+    text-align: center; 
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; 
+}
+
+
+
+.project, .job {
+    margin-bottom: 20px;
+}
+
+/* Skills Section Hover Effect */
+#skills ul li {
+    transition: transform 0.3s ease-in-out;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+    color: #f39c12;
+}
+#ahaan{
+   height: 100px;
+   width: 100px;
+   display:flex ;
+   justify-content: center; 
+   align-items: center;     
+    
+}
+
+
+/* Footer Section */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 2s;
+    position: relative; /* Changed from fixed to relative */
+    bottom: 0;
+    margin-top: 50px; /* Added some space before the footer */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
